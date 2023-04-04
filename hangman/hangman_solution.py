@@ -76,9 +76,9 @@ class Hangman:
             print(f'Nice! {letter} is in the word!')
         # TODO 3: If the letter is in the word, replace the '_' in the word_guessed list with the letter
         correct_letter = False
-        for i in range(len(self.word)):
-            if letter.lower() == self.word[i]:
-                self.word_guessed[i] = letter.lower()
+        for position,char in enumerate(self.word):
+            if letter.lower() == char:
+                self.word_guessed[position] = char
                 correct_letter = True
 
         print(self.word_guessed) 
