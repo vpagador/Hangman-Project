@@ -45,7 +45,7 @@ class Hangman:
         self.word_list = word_list
         self.num_lives = num_lives
 
-        self.word = word_list[random.randint(0,len(word_list)-1)]
+        self.word = random.choice(word_list)
         self.word_guessed = []
         self.list_letters = []
         self.num_letters = 0
